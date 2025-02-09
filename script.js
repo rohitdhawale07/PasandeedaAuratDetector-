@@ -3,17 +3,18 @@ const codeInput = document.getElementById('code');
 const submitBtn = document.getElementById('submit-btn');
 const resultDiv = document.getElementById('result');
 
-const secretCode = 'Diksha'; // Replace with your secret code
-const nextPageUrl = 'main.html'; // Replace with the URL of the new page
+const secretCodes = ['Diksha', 'Baby', 'Jaan', 'Meri Vali', 'kritika']; // Add multiple names
+const nextPageUrl = 'main.html'; // URL of the new page
 
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
 	const userInput = codeInput.value.trim().toLowerCase();
 
-	const correctCode = secretCode.toLowerCase(); // Convert secret code to lowercase
+	// Convert all secret codes to lowercase and check if input exists
+	const isCorrect = secretCodes.some(name => name.toLowerCase() === userInput);
 
-	if (userInput === correctCode) {
-		resultDiv.innerHTML = 'Baby';
+	if (isCorrect) {
+		// resultDiv.innerHTML = 'Baby';
 		window.location.href = nextPageUrl; // Redirect to new page
 	} else {
 		alert('Naa, Tum meri baby nhi hoo kon hooo tum!!!! kaha hai meri Vali...');
