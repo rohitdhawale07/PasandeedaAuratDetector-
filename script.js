@@ -3,7 +3,7 @@ const codeInput = document.getElementById('code');
 const submitBtn = document.getElementById('submit-btn');
 const resultDiv = document.getElementById('result');
 
-const secretCodes = ['Diksha', 'Baby', 'Jaan', 'Meri Vali', 'kritika']; // Add multiple names
+const secretCodes = ['Diksha', 'kritika']; // Add multiple names
 const nextPageUrl = 'main.html'; // URL of the new page
 
 form.addEventListener('submit', (e) => {
